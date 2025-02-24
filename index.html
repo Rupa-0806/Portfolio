@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f7fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #000079, #05004d);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #1a0079;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #08004d;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
+    .content-section {
+      display: none;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #180079, #004d40);
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my work and skills</p>
+  </header>
+  <nav>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('skills')">Skills</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+  <div class="container">
+    <div id="about" class="content-section">
+      <h2>About Me</h2>
+      
+        <p>My name is RupaShree.
+        <br> I am stydying B.Tech  specializing in Computer Science at <em>Maharaj Vijayaram Gajapathi Raj College of Engineering college</em>
+        <br>I am passionate about software development, AI, robotics , Webdevelopment.</p></div>
+    <div id="skills" class="content-section">
+      <h2>My Skills</h2>
+      <ul>
+       
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>HTML, CSS</li>
+      </ul>
+    </div>
+    <div id="projects" class="content-section">
+      <h1>My Projects</h1>
+      <table border="1">
+          <tr>
+              <th>Project</th>
+              <th>Description</th>
+          </tr>
+              <td>Portfolio</td>
+              <td>I have built a portfolio website using Html,css & javascript </td>
+          </tr>
+          <tr>
+              <td>Inventary management system of a retail shop</td>
+              <td>I have built a Inventary management system of a retail shop using python</td>
+          </tr>
+          <tr>
+              <td>Car parking management system</td>
+              <td>I have built a Car parking management system using c++ </td>
+          </tr>
+          <tr>
+              <td>Survey form</td>
+              <td>I have built a Survey form using Html & css</td>
+          </tr>
+          </table>
+
+  </section>
+
+    </div>
+    <div id="contact" class="content-section">
+        <section id="contact">
+            <h1>Contact Me</h1>
+    <p>
+        feel free to get in touch with me using the form below.
+    </p>
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text">
+
+        <label for="email">Email:</label>
+        <input type="email">
+
+        <br>
+    
+    <strong>Choose your gender:</strong>
+    <label for="male">MALE</label>
+    <input type="radio" id="male" value="male">
+    <label for="female">FEMALE</label>
+    <input type="radio" id="female" value="female">
+    <br>
+    <strong>Choose your Interests:</strong>
+    <label for="coding">Coding</label>
+    <input type="checkbox" id="coding" value="coding">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="reading" value="reading">
+    <br>
+    <label for="bio">Bio (upto 200 characters):</label>
+    <input type="text">
+    <br>
+    <button type="submit">Submit</button>
+
+        </section>
+
+  </div>
+  <footer>
+    <p>&copy; 2025 Rupashree. All rights reserved.</p>
+  </footer>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
